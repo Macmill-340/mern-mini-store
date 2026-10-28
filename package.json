@@ -1,0 +1,29 @@
+{
+  "name": "mern-mini-store",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A minimal MERN e-commerce app with COD and optional Razorpay test-mode checkout.",
+  "workspaces": [
+    "server",
+    "client"
+  ],
+  "scripts": {
+    "dev": "concurrently -k -n server,client -c cyan,magenta \"npm run dev -w server\" \"npm run dev -w client\"",
+    "dev:server": "npm run dev -w server",
+    "dev:client": "npm run dev -w client",
+    "seed": "npm run seed -w server",
+    "db:up": "docker compose up -d",
+    "db:down": "docker compose down",
+    "db:reset": "docker compose down -v && docker compose up -d",
+    "typecheck": "npm run typecheck -w server && npm run typecheck -w client",
+    "lint": "npm run lint -w server && npm run lint -w client",
+    "build": "npm run build -w client"
+  },
+  "devDependencies": {
+    "concurrently": "^10.0.0"
+  },
+  "engines": {
+    "node": ">=20.19"
+  },
+  "license": "MIT"
+}
