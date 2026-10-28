@@ -61,7 +61,7 @@ mern-mini-store/
 
 ## Prerequisites
 
-- **Node.js 20.19+** (Node.js 24 LTS recommended)
+- **Node.js 22.12+** (Node.js 24 LTS recommended)
 - **npm 10+**
 - **Docker Desktop** with Docker Compose, *or* an existing MongoDB 8 instance
 - Git
